@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/Puissance4.dir/arbitre.cpp.o CMakeFiles/Puissance4.dir/jeu.cpp.o CMakeFiles/Puissance4.dir/main.cpp.o  -o Puissance4 -lpthread joueurs/libjoueurs.a -lpthread 
