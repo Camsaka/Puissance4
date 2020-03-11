@@ -45,5 +45,6 @@ class Jeu {
   bool fini(); // Vérifie si un état final a été atteint (dans ce cas le jeu prend fin)
   bool partie_nulle(); // Vérifie si la partie est nulle
   void print_coups();
+  int etat();
   Plateau* plateau();
 };

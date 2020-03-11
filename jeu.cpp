@@ -152,3 +152,7 @@ void Plateau::afficher( std::ostream &flux) const {
   flux << std::endl;
 }
 void Jeu::print_coups(){}
+
+int Jeu::etat() {
+  return _etat;
+}

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "algorithm"
 #include <mutex>
 #include <iostream>
 #include "../jeu.h"

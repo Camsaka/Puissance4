@@ -53,3 +53,58 @@ Makefile:126: recipe for target 'cmTC_5c459/fast' failed
 make: *** [cmTC_5c459/fast] Error 2
 
 
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f28b1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f28b1.dir/build.make CMakeFiles/cmTC_f28b1.dir/build
+make[1] : on entre dans le répertoire « /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_f28b1.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_f28b1.dir/CheckSymbolExists.c.o   -c /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f28b1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f28b1.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_f28b1.dir/CheckSymbolExists.c.o  -o cmTC_f28b1 
+CMakeFiles/cmTC_f28b1.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x1b) : référence indéfinie vers « pthread_create »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f28b1.dir/build.make:97: recipe for target 'cmTC_f28b1' failed
+make[1]: *** [cmTC_f28b1] Error 1
+make[1] : on quitte le répertoire « /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_f28b1/fast' failed
+make: *** [cmTC_f28b1/fast] Error 2
+
+File /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9d018/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d018.dir/build.make CMakeFiles/cmTC_9d018.dir/build
+make[1] : on entre dans le répertoire « /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_9d018.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9d018.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9d018
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d018.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_9d018.dir/CheckFunctionExists.c.o  -o cmTC_9d018 -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9d018.dir/build.make:97: recipe for target 'cmTC_9d018' failed
+make[1]: *** [cmTC_9d018] Error 1
+make[1] : on quitte le répertoire « /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_9d018/fast' failed
+make: *** [cmTC_9d018/fast] Error 2
+
+

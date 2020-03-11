@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4
+CMAKE_SOURCE_DIR = /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4
+CMAKE_BINARY_DIR = /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(CMAKE_COMMAND) -E cmake_progress_start /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4/CMakeFiles /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4/joueurs/CMakeFiles/progress.marks
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f CMakeFiles/Makefile2 joueurs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4/CMakeFiles 0
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(CMAKE_COMMAND) -E cmake_progress_start /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/CMakeFiles /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/CMakeFiles/progress.marks
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f CMakeFiles/Makefile2 joueurs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f CMakeFiles/Makefile2 joueurs/clean
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f CMakeFiles/Makefile2 joueurs/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f CMakeFiles/Makefile2 joueurs/preinstall
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f CMakeFiles/Makefile2 joueurs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f CMakeFiles/Makefile2 joueurs/preinstall
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f CMakeFiles/Makefile2 joueurs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 joueurs/CMakeFiles/joueurs.dir/rule:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f CMakeFiles/Makefile2 joueurs/CMakeFiles/joueurs.dir/rule
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f CMakeFiles/Makefile2 joueurs/CMakeFiles/joueurs.dir/rule
 .PHONY : joueurs/CMakeFiles/joueurs.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ joueurs: joueurs/CMakeFiles/joueurs.dir/rule
 
 # fast build rule for target.
 joueurs/fast:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/build
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/build
 .PHONY : joueurs/fast
 
 joueur.o: joueur.cpp.o
@@ -131,7 +131,7 @@ joueur.o: joueur.cpp.o
 
 # target to build an object file
 joueur.cpp.o:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur.cpp.o
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur.cpp.o
 .PHONY : joueur.cpp.o
 
 joueur.i: joueur.cpp.i
@@ -140,7 +140,7 @@ joueur.i: joueur.cpp.i
 
 # target to preprocess a source file
 joueur.cpp.i:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur.cpp.i
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur.cpp.i
 .PHONY : joueur.cpp.i
 
 joueur.s: joueur.cpp.s
@@ -149,7 +149,7 @@ joueur.s: joueur.cpp.s
 
 # target to generate assembly for a file
 joueur.cpp.s:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur.cpp.s
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur.cpp.s
 .PHONY : joueur.cpp.s
 
 joueur_alphabeta_.o: joueur_alphabeta_.cpp.o
@@ -158,7 +158,7 @@ joueur_alphabeta_.o: joueur_alphabeta_.cpp.o
 
 # target to build an object file
 joueur_alphabeta_.cpp.o:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.o
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.o
 .PHONY : joueur_alphabeta_.cpp.o
 
 joueur_alphabeta_.i: joueur_alphabeta_.cpp.i
@@ -167,7 +167,7 @@ joueur_alphabeta_.i: joueur_alphabeta_.cpp.i
 
 # target to preprocess a source file
 joueur_alphabeta_.cpp.i:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.i
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.i
 .PHONY : joueur_alphabeta_.cpp.i
 
 joueur_alphabeta_.s: joueur_alphabeta_.cpp.s
@@ -176,7 +176,7 @@ joueur_alphabeta_.s: joueur_alphabeta_.cpp.s
 
 # target to generate assembly for a file
 joueur_alphabeta_.cpp.s:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.s
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.s
 .PHONY : joueur_alphabeta_.cpp.s
 
 joueur_brutal_.o: joueur_brutal_.cpp.o
@@ -185,7 +185,7 @@ joueur_brutal_.o: joueur_brutal_.cpp.o
 
 # target to build an object file
 joueur_brutal_.cpp.o:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_brutal_.cpp.o
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_brutal_.cpp.o
 .PHONY : joueur_brutal_.cpp.o
 
 joueur_brutal_.i: joueur_brutal_.cpp.i
@@ -194,7 +194,7 @@ joueur_brutal_.i: joueur_brutal_.cpp.i
 
 # target to preprocess a source file
 joueur_brutal_.cpp.i:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_brutal_.cpp.i
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_brutal_.cpp.i
 .PHONY : joueur_brutal_.cpp.i
 
 joueur_brutal_.s: joueur_brutal_.cpp.s
@@ -203,7 +203,7 @@ joueur_brutal_.s: joueur_brutal_.cpp.s
 
 # target to generate assembly for a file
 joueur_brutal_.cpp.s:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_brutal_.cpp.s
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_brutal_.cpp.s
 .PHONY : joueur_brutal_.cpp.s
 
 joueur_random.o: joueur_random.cpp.o
@@ -212,7 +212,7 @@ joueur_random.o: joueur_random.cpp.o
 
 # target to build an object file
 joueur_random.cpp.o:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_random.cpp.o
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_random.cpp.o
 .PHONY : joueur_random.cpp.o
 
 joueur_random.i: joueur_random.cpp.i
@@ -221,7 +221,7 @@ joueur_random.i: joueur_random.cpp.i
 
 # target to preprocess a source file
 joueur_random.cpp.i:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_random.cpp.i
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_random.cpp.i
 .PHONY : joueur_random.cpp.i
 
 joueur_random.s: joueur_random.cpp.s
@@ -230,7 +230,7 @@ joueur_random.s: joueur_random.cpp.s
 
 # target to generate assembly for a file
 joueur_random.cpp.s:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_random.cpp.s
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(MAKE) -f joueurs/CMakeFiles/joueurs.dir/build.make joueurs/CMakeFiles/joueurs.dir/joueur_random.cpp.s
 .PHONY : joueur_random.cpp.s
 
 # Help Target
@@ -265,6 +265,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/Puissance4 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
