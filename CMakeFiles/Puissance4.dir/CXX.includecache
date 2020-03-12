@@ -67,8 +67,6 @@ iostream
 /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur_alphabeta_.h
 joueur.h
 /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur.h
-../arbitre.h
-/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/arbitre.h
 bits/stdc++.h
 -
 

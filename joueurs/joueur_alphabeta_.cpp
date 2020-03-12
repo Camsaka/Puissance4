@@ -23,54 +23,22 @@ int Joueur_AlphaBeta_::eval(Jeu jeu, bool isMax)
 	// }
 	// else if (isMax) return -10;
 	// else return 10;
-	if (jeu.etat()==1)
-	{
-		if (isMax) return -10000;
-		else return 10000;
-	}
 
 	for (int i=0;i<MAX_LARGEUR;++i)
 	{
-		if (isMax and (jeu.plateau()->_hauteur[i]==4) )
+		if (isMax and jeu.plateau()->_hauteur[i]==4)
 		{
 			return -100;
 		}
-		else if(!isMax and (jeu.plateau()->_hauteur[i]==4 )) return 100;
-
-		if (isMax and (jeu.plateau()->_hauteur[i]==3 ) )
-		{
-			return -50;
-		}
-		else if(!isMax and (jeu.plateau()->_hauteur[i]==3) ) return 50;
-
-		if (isMax and (jeu.plateau()->_hauteur[i]==2 ) )
-		{
-			return -30;
-		}
-		else if(!isMax and (jeu.plateau()->_hauteur[i]==2) ) return 30;
+		else if(!isMax and jeu.plateau()->_hauteur[i]==4) return 100;
 	}
-
-
-
 		for (int i=0;i<MAX_LARGEUR;++i)
 	{
-		if (isMax and (jeu.plateau()->_pions[i]==4))
+		if (isMax and jeu.plateau()->_pions[i]==4)
 		{
 			return -100;
 		}
-		else if(!isMax and (jeu.plateau()->_pions[i]==4)) return 100;
-
-		if (isMax and (jeu.plateau()->_pions[i]==3))
-		{
-			return -50;
-		}
-		else if(!isMax and (jeu.plateau()->_pions[i]==3)) return 50;
-
-			if (isMax and (jeu.plateau()->_pions[i]==2))
-		{
-			return -30;
-		}
-		else if(!isMax and (jeu.plateau()->_pions[i]==2)) return 30;
+		else if(!isMax and jeu.plateau()->_pions[i]==4) return 100;
 	}
 
 	if (isMax) return -10;
