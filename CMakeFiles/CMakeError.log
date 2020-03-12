@@ -163,3 +163,58 @@ Makefile:126: recipe for target 'cmTC_4366c/fast' failed
 make: *** [cmTC_4366c/fast] Error 2
 
 
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_99080/fast"
+/usr/bin/make -f CMakeFiles/cmTC_99080.dir/build.make CMakeFiles/cmTC_99080.dir/build
+make[1] : on entre dans le répertoire « /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_99080.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_99080.dir/CheckSymbolExists.c.o   -c /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_99080
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99080.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_99080.dir/CheckSymbolExists.c.o  -o cmTC_99080 
+CMakeFiles/cmTC_99080.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x1b) : référence indéfinie vers « pthread_create »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_99080.dir/build.make:97: recipe for target 'cmTC_99080' failed
+make[1]: *** [cmTC_99080] Error 1
+make[1] : on quitte le répertoire « /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_99080/fast' failed
+make: *** [cmTC_99080/fast] Error 2
+
+File /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eb905/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eb905.dir/build.make CMakeFiles/cmTC_eb905.dir/build
+make[1] : on entre dans le répertoire « /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_eb905.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_eb905.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_eb905
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb905.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_eb905.dir/CheckFunctionExists.c.o  -o cmTC_eb905 -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_eb905.dir/build.make:97: recipe for target 'cmTC_eb905' failed
+make[1]: *** [cmTC_eb905] Error 1
+make[1] : on quitte le répertoire « /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_eb905/fast' failed
+make: *** [cmTC_eb905/fast] Error 2
+
+

@@ -2,6 +2,7 @@
 
 
 #include "joueur.h"
+#include "../arbitre.h"
 #include<bits/stdc++.h> 
 
 

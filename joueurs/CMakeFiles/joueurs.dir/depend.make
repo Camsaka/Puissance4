@@ -5,10 +5,13 @@ joueurs/CMakeFiles/joueurs.dir/joueur.cpp.o: jeu.h
 joueurs/CMakeFiles/joueurs.dir/joueur.cpp.o: joueurs/joueur.cpp
 joueurs/CMakeFiles/joueurs.dir/joueur.cpp.o: joueurs/joueur.h
 
+joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.o: arbitre.h
 joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.o: jeu.h
 joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.o: joueurs/joueur.h
 joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.o: joueurs/joueur_alphabeta_.cpp
 joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.o: joueurs/joueur_alphabeta_.h
+joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.o: joueurs/joueur_brutal_.h
+joueurs/CMakeFiles/joueurs.dir/joueur_alphabeta_.cpp.o: joueurs/joueur_random.h
 
 joueurs/CMakeFiles/joueurs.dir/joueur_brutal_.cpp.o: jeu.h
 joueurs/CMakeFiles/joueurs.dir/joueur_brutal_.cpp.o: joueurs/joueur.h

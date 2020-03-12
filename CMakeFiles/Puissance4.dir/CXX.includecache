@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/gautierc/Documents/L3/SI/Puissance4/arbitre.cpp
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/arbitre.cpp
 arbitre.h
-/home/gautierc/Documents/L3/SI/Puissance4/arbitre.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/arbitre.h
 
-/home/gautierc/Documents/L3/SI/Puissance4/arbitre.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/arbitre.h
 memory
 -
 iostream
@@ -28,23 +28,23 @@ functional
 vector
 -
 jeu.h
-/home/gautierc/Documents/L3/SI/Puissance4/jeu.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/jeu.h
 joueurs/joueur.h
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur.h
 joueurs/joueur_random.h
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur_random.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur_random.h
 joueurs/joueur_brutal_.h
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur_brutal_.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur_brutal_.h
 joueurs/joueur_alphabeta_.h
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur_alphabeta_.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur_alphabeta_.h
 
-/home/gautierc/Documents/L3/SI/Puissance4/jeu.cpp
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/jeu.cpp
 jeu.h
-/home/gautierc/Documents/L3/SI/Puissance4/jeu.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/jeu.h
 iostream
 -
 
-/home/gautierc/Documents/L3/SI/Puissance4/jeu.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/jeu.h
 math.h
 -
 stdio.h
@@ -54,29 +54,31 @@ stdlib.h
 iostream
 -
 
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur.h
 algorithm
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/algorithm
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/algorithm
 mutex
 -
 iostream
 -
 ../jeu.h
-/home/gautierc/Documents/L3/SI/Puissance4/jeu.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/jeu.h
 
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur_alphabeta_.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur_alphabeta_.h
 joueur.h
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur.h
+../arbitre.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/arbitre.h
 bits/stdc++.h
 -
 
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur_brutal_.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur_brutal_.h
 thread
 -
 joueur.h
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur.h
 
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur_random.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur_random.h
 cstdlib
 -
 iostream
@@ -86,13 +88,13 @@ ctime
 utility
 -
 joueur.h
-/home/gautierc/Documents/L3/SI/Puissance4/joueurs/joueur.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/joueur.h
 
-/home/gautierc/Documents/L3/SI/Puissance4/main.cpp
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/main.cpp
 iostream
 -
 mutex
 -
 arbitre.h
-/home/gautierc/Documents/L3/SI/Puissance4/arbitre.h
+/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/arbitre.h
 

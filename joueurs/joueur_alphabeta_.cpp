@@ -16,8 +16,66 @@ char Joueur_AlphaBeta_::nom_abbrege() const
 // Revoir la fonction evaluation ..
 int Joueur_AlphaBeta_::eval(Jeu jeu, bool isMax)
 {
-	if (isMax) return -1;
-	else return 1;
+	// if (jeu.etat()==1)
+	// {
+	// 	if (isMax) return -100;
+	// 	else return 100;
+	// }
+	// else if (isMax) return -10;
+	// else return 10;
+	if (jeu.etat()==1)
+	{
+		if (isMax) return -10000;
+		else return 10000;
+	}
+
+	for (int i=0;i<MAX_LARGEUR;++i)
+	{
+		if (isMax and (jeu.plateau()->_hauteur[i]==4) )
+		{
+			return -100;
+		}
+		else if(!isMax and (jeu.plateau()->_hauteur[i]==4 )) return 100;
+
+		if (isMax and (jeu.plateau()->_hauteur[i]==3 ) )
+		{
+			return -50;
+		}
+		else if(!isMax and (jeu.plateau()->_hauteur[i]==3) ) return 50;
+
+		if (isMax and (jeu.plateau()->_hauteur[i]==2 ) )
+		{
+			return -30;
+		}
+		else if(!isMax and (jeu.plateau()->_hauteur[i]==2) ) return 30;
+	}
+
+
+
+		for (int i=0;i<MAX_LARGEUR;++i)
+	{
+		if (isMax and (jeu.plateau()->_pions[i]==4))
+		{
+			return -100;
+		}
+		else if(!isMax and (jeu.plateau()->_pions[i]==4)) return 100;
+
+		if (isMax and (jeu.plateau()->_pions[i]==3))
+		{
+			return -50;
+		}
+		else if(!isMax and (jeu.plateau()->_pions[i]==3)) return 50;
+
+			if (isMax and (jeu.plateau()->_pions[i]==2))
+		{
+			return -30;
+		}
+		else if(!isMax and (jeu.plateau()->_pions[i]==2)) return 30;
+	}
+
+	if (isMax) return -10;
+	else return 10;
+	
 }
 
 int _max(int a, int b)
@@ -31,12 +89,12 @@ int _min(int a, int b)
 
 // isMax -> Joueur
 // p -> profondeur
-int eval(Jeu j,bool isMax){
-	if (isMax){
-		return -1;
-	}
-	else return 1;	
-}
+// int eval(Jeu j,bool isMax){
+// 	if (isMax){
+// 		return -1;
+// 	}
+// 	else return 1;	
+// }
 
 int Joueur_AlphaBeta_::alphaBeta(Jeu jeu,int a,int b,bool isMax,int & coup, int depth, int ab)
 {
@@ -57,11 +115,10 @@ int Joueur_AlphaBeta_::alphaBeta(Jeu jeu,int a,int b,bool isMax,int & coup, int 
 		v = -9999;
 		for(int i=0;i<J.nb_coups()-1;++i)
 		{
-			--depth;
 			if(J.coup_licite(i)){
 				// J = jeu;
 				J.joue(mult*(i+1));
-				v = _max(v,alphaBeta(J,alpha,beta,false,i,depth,ab));
+				v = _max(v,alphaBeta(J,alpha,beta,false,i,depth-1,ab));
 				alpha = _max(alpha,v);
 			}
 				// std::cout<<"Alpha : "<<alpha<<std::endl;
@@ -78,7 +135,7 @@ int Joueur_AlphaBeta_::alphaBeta(Jeu jeu,int a,int b,bool isMax,int & coup, int 
 			if(J.coup_licite(i)){
 				// J = jeu;
 				J.joue(mult*(i+1));
-				v = _min(v,alphaBeta(J,alpha,beta,true,i,depth,ab));
+				v = _min(v,alphaBeta(J,alpha,beta,true,i,depth-1,ab));
 				beta = _min(beta,v);
 			}
 				// std::cout<<"Beta : "<<beta<<std::endl;
@@ -162,7 +219,7 @@ void Joueur_AlphaBeta_::recherche_coup(Jeu jeu, int &coup)
 		if(J.coup_licite(i)){
 			// J = jeu;
 			J.joue(mult*(i+1));;
-			score = alphaBeta(J,alpha,beta,false,i,5,ab);
+			score = alphaBeta(J,alpha,beta,false,i,1000,ab);
 			std::cout<<score;
 			if (score>result){ result=score; coup =i;}
 		}

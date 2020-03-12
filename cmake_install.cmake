@@ -1,4 +1,4 @@
-# Install script for directory: /home/gautierc/Documents/L3/SI/Puissance4
+# Install script for directory: /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gautierc/Documents/L3/SI/Puissance4/joueurs/cmake_install.cmake")
+  include("/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gautierc/Documents/L3/SI/Puissance4/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
