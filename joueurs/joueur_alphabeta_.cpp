@@ -2,14 +2,14 @@
 
 
 Joueur_AlphaBeta_::Joueur_AlphaBeta_(std::string nom, bool joueur)
-    :Joueur(nom,joueur)
+:Joueur(nom,joueur)
 {}
 
 
 
 char Joueur_AlphaBeta_::nom_abbrege() const
 {
-    return 'A';
+	return 'A';
 }
 
 
@@ -20,76 +20,75 @@ int Joueur_AlphaBeta_::eval(Jeu jeu, bool isMax)
 	else return 1;
 }
 
-	int _max(int a, int b)
-	{
-	return ((a>=b)? a:b) ;
-	}
-	int _min(int a, int b)
-	{
-	return ((a<=b)? a:b) ;
-	}
-
-bool Joueur_AlphaBeta_::coup_gagnant(Jeu jeu,int & coup)
+int _max(int a, int b)
 {
-	jeu.joue(coup);
-	if (jeu.etat()==1) return true;
-	else false;
-
+	return ((a>=b)? a:b) ;
 }
-
-
+int _min(int a, int b)
+{
+	return ((a<=b)? a:b) ;
+}
 
 // isMax -> Joueur
 // p -> profondeur
+int eval(Jeu j,bool isMax){
+	if (isMax){
+		return -1;
+	}
+	else return 1;	
+}
 
-
-int Joueur_AlphaBeta_::alphaBeta(Jeu jeu,int a,int b,bool isMax,int coup)
+int Joueur_AlphaBeta_::alphaBeta(Jeu jeu,int a,int b,bool isMax,int & coup, int depth, int ab)
 {
 
-	if (jeu.etat()==1)
-	{
-		if (isMax) return -1;
-		else return 1;	
-	}
 
 	// else if (coup_gagnant(jeu,coup) and isMax) return -100;
 	// 	else if (coup_gagnant(jeu,coup) and !isMax) return 1000;
-
-
-	Jeu J = jeu;
+	Jeu J = jeu;	
+	if (J.etat()==ALIGNEMENT or depth ==0){ return eval(J,isMax);}
 	int alpha =a;
 	int beta =b;
+	int v = 0;
+	int mult;
+	if (ab==0) {mult=1;} else {mult=-1;};
 
 	if (isMax)
+	{
+		v = -9999;
+		for(int i=0;i<J.nb_coups()-1;++i)
 		{
-			int v = -9999;
-			for(int i=0;i<jeu.nb_coups();++i)
-			{
-				J = jeu;
-				J.joue(i);
-				v = _max(v,alphaBeta(J,alpha,beta,false,i));
-				 alpha = _max(alpha,v);
-				std::cout<<"Alpha : "<<alpha<<std::endl;
-				if (alpha>=beta) break;
+			--depth;
+			if(J.coup_licite(i)){
+				// J = jeu;
+				J.joue(mult*(i+1));
+				v = _max(v,alphaBeta(J,alpha,beta,false,i,depth,ab));
+				alpha = _max(alpha,v);
 			}
-			return v;
+				// std::cout<<"Alpha : "<<alpha<<std::endl;
+			if (alpha>=beta) break;
 		}
+		return v;
+	}
 
 	else
+	{
+		v = 9999;
+		for(int i=0;i<J.nb_coups()-1;++i)
 		{
-			int v = 9999;
-			for(int i=0;i<jeu.nb_coups();++i)
-			{
-				J = jeu;
-				J.joue(i);
-				 v = _min(v,alphaBeta(J,alpha,beta,true,i));
-				 beta = _min(beta,v);
-				std::cout<<"Beta : "<<beta<<std::endl;
-				if (alpha>=beta) break;
+			if(J.coup_licite(i)){
+				// J = jeu;
+				J.joue(mult*(i+1));
+				v = _min(v,alphaBeta(J,alpha,beta,true,i,depth,ab));
+				beta = _min(beta,v);
 			}
-			return v;
+				// std::cout<<"Beta : "<<beta<<std::endl;
+			if (alpha>=beta) break;
 		}
+		return v;
+	}
 }
+
+
 /*
 int principal_variation_search(Jeu jeu,int a,int b, bool isMax)
 {
@@ -146,35 +145,28 @@ void Joueur_AlphaBeta_::recherche_coup(Jeu jeu, int &coup)
 	 // std::cout<<jeu.nb_coups();
 	std::cout<<std::endl;
 	int result = -99;
+	coup =0;
+	int alpha =-999;
+	int beta =999;
+	int score =0;
 	Jeu J = jeu;
 
-	if (test<3)
+	int tour= jeu.nb_coups();
+	int ab = tour%2;
+	int mult = 1;
+	if (ab == 1) { mult=-1; }
+
+
+	for (int i=0;i<7;++i)
 	{
-		coup = 0;
-		test++;
-	}
-
-
-else {
-		for (int i=0;i<jeu.nb_coups();++i)
-		{
-			// "Joue" le coup en jeu[i] et regarde le score, compare avec tout les coups possibles quels choix prendre.
-			// jeu.joue(i);
-			J=jeu;
-			J.joue(i);
-			// std::cout<<"MINMAX : "<<minMax(J,false)<<"\t\n";
-			// int score = minMax(J,false);
-			   int score = alphaBeta(J,-999,999,false,i);
-			// //int score = principal_variation_search(J,-999,999,false);
-			  std::cout<<score;
-			 // coup=0;
-			 if (score>result)
-			 {
-			 	result=score;
-			 	coup =i;
-			 }
+		if(J.coup_licite(i)){
+			// J = jeu;
+			J.joue(mult*(i+1));;
+			score = alphaBeta(J,alpha,beta,false,i,5,ab);
+			std::cout<<score;
+			if (score>result){ result=score; coup =i;}
 		}
 	}
 }
 
-			
+

@@ -13,9 +13,8 @@ public:
   void recherche_coup(Jeu, int & coup) override;
   int eval(Jeu jeu,bool isMax);
   int minMax(Jeu jeu,bool isMax);
-  int alphaBeta(Jeu jeu,int alpha,int beta,bool isMax,int coup);
+  int alphaBeta(Jeu jeu,int alpha,int beta,bool isMax,int & coup, int depth, int ab);
   int log2(int n);
-  bool coup_gagnant(Jeu jeu,int & coup);
   // void rechercheMinMax(bool joueur,int profondeur,int coup);
 
 };

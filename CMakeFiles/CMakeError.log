@@ -108,3 +108,58 @@ Makefile:126: recipe for target 'cmTC_d5eaa/fast' failed
 make: *** [cmTC_d5eaa/fast] Error 2
 
 
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/gautierc/Documents/L3/SI/Puissance4/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_89fee/fast"
+/usr/bin/make -f CMakeFiles/cmTC_89fee.dir/build.make CMakeFiles/cmTC_89fee.dir/build
+make[1] : on entre dans le répertoire « /home/gautierc/Documents/L3/SI/Puissance4/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_89fee.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_89fee.dir/CheckSymbolExists.c.o   -c /home/gautierc/Documents/L3/SI/Puissance4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_89fee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89fee.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_89fee.dir/CheckSymbolExists.c.o  -o cmTC_89fee 
+CMakeFiles/cmTC_89fee.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x1b) : référence indéfinie vers « pthread_create »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_89fee.dir/build.make:97: recipe for target 'cmTC_89fee' failed
+make[1]: *** [cmTC_89fee] Error 1
+make[1] : on quitte le répertoire « /home/gautierc/Documents/L3/SI/Puissance4/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_89fee/fast' failed
+make: *** [cmTC_89fee/fast] Error 2
+
+File /home/gautierc/Documents/L3/SI/Puissance4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/gautierc/Documents/L3/SI/Puissance4/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4366c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4366c.dir/build.make CMakeFiles/cmTC_4366c.dir/build
+make[1] : on entre dans le répertoire « /home/gautierc/Documents/L3/SI/Puissance4/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_4366c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4366c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4366c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4366c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_4366c.dir/CheckFunctionExists.c.o  -o cmTC_4366c -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4366c.dir/build.make:97: recipe for target 'cmTC_4366c' failed
+make[1]: *** [cmTC_4366c] Error 1
+make[1] : on quitte le répertoire « /home/gautierc/Documents/L3/SI/Puissance4/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_4366c/fast' failed
+make: *** [cmTC_4366c/fast] Error 2
+
+

@@ -1,4 +1,4 @@
-# Install script for directory: /home/nimartinez/Documents/L3_Info/Systeme_intelligent/PUISSANCE4/joueurs
+# Install script for directory: /home/gautierc/Documents/L3/SI/Puissance4/joueurs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
